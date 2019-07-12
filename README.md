@@ -1,0 +1,2 @@
+# proyectoEstadistica
+longos vagos alv
