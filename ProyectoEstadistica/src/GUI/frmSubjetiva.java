@@ -25,7 +25,7 @@ public class frmSubjetiva extends javax.swing.JFrame implements ActionListener {
     jpanelGeAD panelGAD = new jpanelGeAD();
     jpanelNeg panelNeg = new jpanelNeg();
     jpanelEMUL panelEMUL= new jpanelEMUL();
-    
+    jpanelGMUL panelGMUL= new jpanelGMUL();
     
     public frmSubjetiva() {
         initComponents();
@@ -162,6 +162,8 @@ public class frmSubjetiva extends javax.swing.JFrame implements ActionListener {
             activarNeg();
         }else if (evt.equals(rbEMUL)) {
             activarEMUL();
+        }else if (evt.equals(rbGMUL)){
+            activarGMUL();
         }
     }
     // =================================================================    Activacion de RadioButtons para vereficacion     =================================================================
@@ -182,6 +184,7 @@ public class frmSubjetiva extends javax.swing.JFrame implements ActionListener {
         panelGAD.setVisible(false);
         panelNeg.setVisible(false);
         panelEMUL.setVisible(false);
+        panelGMUL.setVisible(false);
     }
 
     public void activarGAD() {
@@ -190,6 +193,7 @@ public class frmSubjetiva extends javax.swing.JFrame implements ActionListener {
         panelAD.setVisible(false);
         panelNeg.setVisible(false);
         panelEMUL.setVisible(false);
+        panelGMUL.setVisible(false);
     }
     
     public void activarNeg() {
@@ -198,11 +202,22 @@ public class frmSubjetiva extends javax.swing.JFrame implements ActionListener {
         panelGAD.setVisible(false);
         panelAD.setVisible(false);
         panelEMUL.setVisible(false);
+        panelGMUL.setVisible(false);
     }
     
     public void activarEMUL() {
         jpContenedor.add(panelEMUL);
         panelEMUL.setVisible(true);
+        panelNeg.setVisible(false);
+        panelGAD.setVisible(false);
+        panelAD.setVisible(false);
+        panelGMUL.setVisible(false);
+    }
+    
+    public void activarGMUL() {
+        jpContenedor.add(panelGMUL);
+        panelGMUL.setVisible(true);
+        panelEMUL.setVisible(false);
         panelNeg.setVisible(false);
         panelGAD.setVisible(false);
         panelAD.setVisible(false);

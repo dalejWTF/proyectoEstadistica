@@ -47,6 +47,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         });
 
         btnSubjetiva.setText("Subjetiva");
+        btnSubjetiva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubjetivaActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Elija el tipo de operacion a realizar:");
 
@@ -103,6 +108,13 @@ public class frmPrincipal extends javax.swing.JFrame {
         frm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnObjetivaActionPerformed
+
+    private void btnSubjetivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubjetivaActionPerformed
+        // TODO add your handling code here:
+        frmSubjetiva frm= new frmSubjetiva();
+        frm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnSubjetivaActionPerformed
 
     /**
      * @param args the command line arguments
